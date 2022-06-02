@@ -1,12 +1,12 @@
 import Item from "../models/Item";
 
-interface ItemQuery {
+export interface ItemQuery {
     restaurant: string;
     item: string;
 }
 
 export default interface ItemRepository {
-    createItem(restaurant: string, item: Item): Promise<void>;
-    updateItem(query: ItemQuery, newItem: Item): Promise<void>;
-    getItem(query: ItemQuery): Promise<void>;
+    createItem(restaurant: string, item: Item): Promise<boolean>;
+    updateItem(query: ItemQuery, newItem: Item): Promise<boolean>;
+    getItem(query: ItemQuery): Promise<Item | null>;
 }

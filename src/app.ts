@@ -23,7 +23,7 @@ app.use(cors({
 
 // Routes
 app.use('/restaurant', RestaurantRouter);
-// app.use('/item', ItemRouter);
+app.use('/item', ItemRouter);
 
 app.use((req, res) => {
     res.status(404);
