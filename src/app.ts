@@ -32,3 +32,5 @@ app.use((req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor rodando com sucesso ${HOSTNAME}:${PORT}`);
 });
+
+export default app;

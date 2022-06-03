@@ -67,12 +67,14 @@ export default class ItemMongoAPI implements ItemRepository {
                 },
               },
               { $group: { _id: "$_id", meals: { $push: "$meals" } } },
+              {
+                $limit: 1,
+              },
             ])
             .next();
 
-          if (value) {
-            res(value.meals as Item);
-          }
+          if (value) res(value.meals as Item);
+          else res(null);
         } catch (e: any) {
           console.error(e.message);
           res(null);
