@@ -1,10 +1,13 @@
 import Restaurant from "../models/restaurant";
 
 export interface RestaurantQuery {
-    city: string;
-    segment: string;
-    plate: string;
-    distance: string;
+    city?: string;
+    segment?: string;
+    plate?: string;
+    distance?: {
+        coord: [number, number],
+        radius: number
+    };
 }
 
 export default interface RestaurantRepository {

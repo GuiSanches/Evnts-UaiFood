@@ -5,7 +5,7 @@ export type RestaurantSchema = Restaurant & WithId<Document>
 
 abstract class RestaurantMongoAdapter {
   public static convertToModel(document: RestaurantSchema): Restaurant {
-    const { name, city, segment, stars, address, tags, meals } = document;
+    const { name, city, segment, stars, address, tags, meals, location } = document;
     const restaurant: Restaurant = {
       name,
       city,
@@ -13,7 +13,8 @@ abstract class RestaurantMongoAdapter {
       stars,
       address,
       tags,
-      meals
+      meals,
+      location
     };
 
     return restaurant;

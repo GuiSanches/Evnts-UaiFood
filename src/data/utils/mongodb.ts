@@ -1,27 +1,29 @@
-import { Db, MongoClient, ServerApiVersion } from "mongodb";
-require('dotenv').config();
+import { Db } from "mongodb";
+import { client } from "../../app";
+require("dotenv").config();
 
-const URI = process.env.MONGO_DB_URL || '';
-const PASSWORD = process.env.PASSWORD || '';
+const connectDB = async (dbName: string, Query: (db: Db) => Promise<void>) => {
+  try {
+    const db = (await client.connect()).db(dbName);
+    await Query(db);
+    client.close();
+  } catch (e: any) {
+    throw new Error("Error on Query. Verify the database");
+  }
+  return;
+};
 
-const connectDB = async (dbName: string, Query: (db : Db) => Promise<void>) => {
-    try {
-        const client = new MongoClient(URI.replace('<password>', PASSWORD), {
-            serverApi: ServerApiVersion.v1
-        });
+export const initializeDB = async () => {
+  try {
+    const db = (await client.connect()).db("uaifood");
 
-        client.connect(async err => {
-            const db = client.db(dbName);
-
-            await Query(db);
-
-            client.close();
-        })
-
-    }catch(e: any) {
-        console.error(e.message);
-    }
-}
+    await db
+      .collection("restaurant")
+      .createIndex({ name: 1 }, { unique: true });
+    await db.collection("restaurant").createIndex({ location: "2dsphere" });
+  } catch (e: any) {
+    console.log(e.message);
+  }
+};
 
 export default connectDB;
-

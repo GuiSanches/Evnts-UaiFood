@@ -4,12 +4,12 @@ import chaiHttp from "chai-http";
 import ItemRepository from "../repositories/item-repository";
 import ItemMongoAPI from "../data/itemRepository/itemMongoAPI";
 import RestaurantRepository from "../repositories/restaurant-repository";
-import RestaurantMongoAPI from "../data/restaurantRepository/restaurantMongoAPI";
 import connectDB from "../data/utils/mongodb";
 import server from "../app";
 
 import MOCK_RESTAURANT from "./mocks/Restaurant";
 import MOCK_ITEM from "./mocks/item";
+import RestaurantMongoAPI from "../data/restaurantRepository/restaurantMongoAPI";
 
 const should = chai.should();
 chai.use(chaiHttp);

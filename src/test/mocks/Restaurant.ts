@@ -8,6 +8,7 @@ const MOCK_RESTAURANT: Restaurant = {
   address: "Av Principal",
   tags: ["Saboroso"],
   meals: [],
+  location: [0, 0]
 };
 
 export default MOCK_RESTAURANT;
