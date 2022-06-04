@@ -20,8 +20,8 @@ A seguir os endpoints para interagir com os estabelecimetos
 
 ## Rodando
 
-Para rodar a aplicação é necessário ter o docker instalado e configurado
-[Tutorial](https://docs.docker.com/compose/install/)
+Para rodar a aplicação é necessário ter o docker instalado e configurado.
+([Link para tutorial](https://docs.docker.com/compose/install/))
 
 ```
   docker-compose up --build
