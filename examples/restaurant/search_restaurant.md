@@ -25,9 +25,9 @@ Request Example
 ```json
   "city": "São Vicente",
   "segment": "Alimenticio"
-  distance: {
-    coord: [123, 314],
-    radius: 1
+  "distance": {
+    "coord": [123, 314],
+    "radius": 1
    }
 ```
 
@@ -48,9 +48,3 @@ Request Example
     "location": [123, 314]
 }
 ```
-
-## Erros previstos
-
-**Condição** : Estabelecimento não encontrado
-
-**Code** : `404`
