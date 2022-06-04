@@ -16,3 +16,13 @@ A seguir os endpoints para interagir com os estabelecimetos
 
 * [Adicionar prato](examples/item/add_meal.md) : `POST /item/:restaurant/`
 * [Atualizar prato - Restaurante](examples/item/update_meal.md) : `PUT /item/:restaurant/:item`
+
+
+## Rodando
+
+Para rodar a aplicação é necessário ter o docker instalado e configurado.
+([Link para tutorial](https://docs.docker.com/compose/install/))
+
+```
+  docker-compose up --build
+```
