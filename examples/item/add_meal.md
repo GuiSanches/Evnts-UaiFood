@@ -1,4 +1,4 @@
-# Adiciona restaurante
+# Adiciona prato
 
 Recebe um JSON de um prato e insere no estabelecimento.
 
