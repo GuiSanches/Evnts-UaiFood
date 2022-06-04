@@ -10,11 +10,6 @@ Recebe um JSON de um restaurante e insere se não houver restaurante com mesmo n
 
 **Permissions required** : None
 
-## Success Response
-
-**Code** : `200 OK`
-
-
 Body type
 ```
   name: string
@@ -40,9 +35,13 @@ Body type
     location: [123, 314]
 ```
 
+## Success Response
+
+**Code** : `200 OK`
+**Message**: `Deu bom`
+
 ## Erros previstos
 
 **Condição** : Estabelecimento já existente
 
 **Code** : `404`
-```
