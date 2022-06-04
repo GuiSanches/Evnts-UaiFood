@@ -28,6 +28,7 @@ Response type
 
 **payload**: 
 ```json
+{
     "name": "Pedrinho",
     "city": "São Vicente",
     "segment": "Alimentício",
@@ -36,6 +37,7 @@ Response type
     "tags": ["parceiro"],
     "meals": [],
     "location": [123, 314]
+}
 ```
 
 ## Erros previstos
