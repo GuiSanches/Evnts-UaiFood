@@ -37,7 +37,7 @@ Body type
     "address": "Rua 5",
     "tags": ["parceiro"],
     "meals": [],
-    location: [123, 314];
+    location: [123, 314]
 ```
 
 ## Erros previstos
