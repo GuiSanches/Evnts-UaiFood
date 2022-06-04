@@ -33,17 +33,4 @@ itemRouter.put("/:restaurant/:item", async (req, res) => {
   else res.status(404).send("Not found");
 });
 
-itemRouter.get("/:restaurant/:item", async (req, res) => {
-  const restaurant: string = req.params.restaurant;
-  const itemName: string = req.params.item;
-
-  const data = await itemRepository.getItem({
-    item: itemName,
-    restaurant,
-  });
-
-  if (data) res.status(200).json(data);
-  else res.status(404).send("Not found");
-});
-
 export default itemRouter;

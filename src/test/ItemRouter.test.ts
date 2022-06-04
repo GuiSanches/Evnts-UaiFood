@@ -56,17 +56,6 @@ describe(`Testando endpoint ${ENDPOINT}`, () => {
       })
     });
 
-    describe("/GET item", () => {
-      it("Deve buscar um prato dado o nome do restaurante e do prato", (done) => {
-        chai.request(server)
-        .get(`${ENDPOINT}/${MOCK_RESTAURANT.name}/${MOCK_ITEM.name}`)
-        .end((err, res) => {
-          res.should.have.status(200);
-          done();
-        })
-      })
-    });
-
   afterEach(() => {
     return new Promise<void>((resolve) => {
       connectDB("uaifood", async (db) => {
