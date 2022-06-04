@@ -24,7 +24,7 @@ Body type
 {
     "name": "Pedrinho",
     "price": 47.0,
-    ingredients: "Açúcar, tempero, e tudo o que há de bom (ou, na nova versão, tudo de maneiro).",
+    "ingredients": "Açúcar, tempero, e tudo o que há de bom (ou, na nova versão, tudo de maneiro).",
     "imageUrl": "https://pbs.twimg.com/media/EUX9kfHX0AQdBTk.jpg",
     "tags": ["japones", "brasileiro"],
 ```
