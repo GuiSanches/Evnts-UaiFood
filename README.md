@@ -6,13 +6,13 @@ Abaixo está a documentação da API desenvolvida para o processo seletivo da Ev
 
 A seguir os endpoints para interagir com os estabelecimetos
 
-* [Adicionar restaurante](restaurant/add_restaurant.md) : `POST /restaurant/`
-* [Buscar restaurante - Nome](restaurant/search_restaurant_name.md) : `GET /restaurant/:name`
-* [Buscar restaurante - Query](restaurant/search_restaurant.md) : `GET /restaurant/`
+* [Adicionar restaurante](examples/restaurant/add_restaurant.md) : `POST /restaurant/`
+* [Buscar restaurante - Nome](examples/restaurant/search_restaurant_name.md) : `GET /restaurant/:name`
+* [Buscar restaurante - Query](examples/restaurant/search_restaurant.md) : `GET /restaurant/`
 
 ## Pratos
 
 A seguir os endpoints para interagir com os estabelecimetos
 
-* [Adicionar prato](item/add_meal.md) : `POST /item/:restaurant/`
-* [Atualizar prato - Restaurante](item/update_meal.md) : `PUT /item/:restaurant/:item`
+* [Adicionar prato](examples/item/add_meal.md) : `POST /item/:restaurant/`
+* [Atualizar prato - Restaurante](examples/item/update_meal.md) : `PUT /item/:restaurant/:item`
