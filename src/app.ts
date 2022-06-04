@@ -9,7 +9,7 @@ require("dotenv").config();
 const PORT = process.env.PORT || 7500;
 
 const app = express();
-const URI = process.env.MONGO_DB_LOCAL || "";
+const URI = process.env.MONGO_DB_LOCAL || "mongodb://db:27017/uaifood";
 
 export const client = new MongoClient(URI, {
   serverApi: ServerApiVersion.v1,
